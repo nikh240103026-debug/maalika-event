@@ -3,6 +3,21 @@
 A static, dependency-free landing page. Upload the whole folder to any static host
 (Netlify, Vercel, GitHub Pages, cPanel hosting, etc.).
 
+## Deploy with GitHub Pages
+
+The `main` branch is deployed automatically by GitHub Actions whenever you push.
+
+1. In the repository, open **Settings → Pages** and set **Build and deployment → Source**
+   to **GitHub Actions**.
+2. Open the **Actions** tab and wait for the **Deploy to GitHub Pages** workflow to finish.
+3. Visit `https://nikh240103026-debug.github.io/maalika-event/`. Later pushes to `main`
+   will publish automatically; you can also start a deployment from **Actions**.
+
+The SEO metadata and sitemap currently use `https://maalikaevent.com/`. To use that
+custom domain, add `maalikaevent.com` under **Settings → Pages → Custom domain** and
+configure the DNS records with your domain provider. Otherwise, update the domain
+references in `index.html`, `robots.txt`, and `sitemap.xml` to match the GitHub Pages URL.
+
 ```
 robots.txt, sitemap.xml  search-engine files (domain: maalikaevent.com)
 index.html            page content, SEO, Open Graph, LocalBusiness structured data
