@@ -9,7 +9,8 @@ The `main` branch is deployed automatically by GitHub Actions whenever you push.
 
 1. In the repository, open **Settings → Pages** and set **Build and deployment → Source**
    to **GitHub Actions**.
-2. Open the **Actions** tab and wait for the **Deploy to GitHub Pages** workflow to finish.
+2. Open the **Actions** tab and select the latest **Deploy to GitHub Pages** run. If it
+   failed before Pages was enabled, choose **Re-run all jobs**. Wait for the run to finish.
 3. Visit `https://nikh240103026-debug.github.io/maalika-event/`. Later pushes to `main`
    will publish automatically; you can also start a deployment from **Actions**.
 
