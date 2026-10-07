@@ -275,15 +275,16 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var name = form.elements.name;
+      var phone = form.elements.phone;
       var type = form.elements.type;
       var missing = [];
-      [name, type].forEach(function (field) {
+      [name, phone, type].forEach(function (field) {
         var bad = !field.value.trim();
         field.setAttribute("aria-invalid", String(bad));
         if (bad) missing.push(field);
       });
       if (missing.length) {
-        errorEl.textContent = "Please add your name and the type of event.";
+        errorEl.textContent = "Please add your name, phone number and the type of event.";
         missing[0].focus();
         return;
       }
@@ -298,6 +299,7 @@
         "Hello Maalika Event!",
         "",
         "Name: " + name.value.trim(),
+        "Phone: " + phone.value.trim(),
         "Event: " + type.value
       ];
       if (date) lines.push("Date: " + date);
